@@ -1,0 +1,61 @@
+
+--------------------------------POST------------------------------------
+1.Method: createCart Description: It is used to create cart for new user into
+   the CART_MODULE table
+2. createCart : Method "POST".
+3. URL: http://localhost:8085/api/v1/cart/{customerId}
+4. INPUT: pass customerId in PathVariable.
+
+-------------------------------GET-----------------------------------------
+1.Method:  showAll Description: It is used to fetch all cart details for
+   existing user from the CART_MODULE table
+2. showAll : Method "GET".
+3. URL: http://localhost:8085/api/v1/cart
+4. INPUT : not input send request to get all cart Details.
+
+------------------------------DELETE---------------------------------------
+1 Method: deleteMedicine Description: It is used to delete specific medicine
+	record for existing cart user from the CART_MODULE table
+2. deleteMedicine : Method "DELETE".
+3. URL: http://localhost:8085/api/v1/cart/{cartId}/{medicineId}
+4. INPUT : pass cartId and medicineId in PathVariable
+
+------------------------------DELETE-----------------------------------------
+1.Method: deleteMedicines Description: It is used to delete entire cart
+   medicines record for existing cart user from the CART_MODULE table
+2. deleteMedicines : Method "DELETE". 
+3. URL: http://localhost:8085/api/v1/cart/{cartId}
+4. INPUT : pass cartId in PathVariable
+
+------------------------------POST-------------------------------------------
+1.Method: addToCart Description: It is used to add medicine into cart for new
+   or existing user into the CART_MODULE table
+2. addToCart : Method "POST".
+3. URL: http://localhost:8085/api/v1/cart/addtocart/{customerId}/{medicineId}
+4. INPUT : pass customerId and medicineId in PathVariable
+
+------------------------------GET-----------------------------------------------
+1.Method: viewMedicines Description: It is used to fetch all medicines details for
+    existing user from the CART_MODULE table
+2. viewMedicines : Method "GET".
+3. URL: http://localhost:8085/api/v1/cart/{cartId}
+4. INPUT : pass cartId in PathVariable
+
+-------------------------------GET---------------------------------------------
+1.Method: viewCartInfo Description: It is used to fetch cart details for
+   existing user from the CART_MODULE table
+2. viewCartInfo : Method "GET".
+3. URL: http://localhost:8085/api/v1/cart/cartInfo/{cartId}
+4. INPUT : pass cartId in PathVariable
+
+------------------------------POST----------------------------------------------
+1.Method: addMedicine Description: It is used to add medicine quantity into cart for new
+  or existing user into the CART_MODULE table
+2. addMedicine : Method "POST".
+3. URL: http://localhost:8085/api/v1/cart/{cartId}/{medicineId}/{quantity}
+4. INPUT : pass cartId, medicineId and quantity in PathVariable
+
+------------------------------------------------------------------------------------
+  
+   
+   

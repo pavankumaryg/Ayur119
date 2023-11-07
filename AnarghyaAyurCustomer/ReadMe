@@ -1,0 +1,91 @@
+
+END POINTS IN ANARGHYA AYUR CUSTOMER PROJECT
+------------------------------------POST----------------------------------------------
+1. Add Customer : Method "POST"
+2. This method is also used for customer registration 
+3. URL: http://localhost:9092/api-v1/customers
+4. INPUT: 
+   Body -> Raw -> JSON
+   {
+    "customerName" : "ramesh",
+    "emailId" : "ramesh@gmail.com",
+    "mobileNumber" : "9087908790",
+    "password" : "ramesh",
+    "address":"karimnagar"
+	}
+	
+------------------------------------GET----------------------------------------------
+1. View Customer By Id : Method "GET"
+2. URL: http://localhost:9092/api-v1/customers/{customerId}
+
+1.View Customer By EmailId : Method "GET"
+2. URL: http://localhost:9092/api-v1/email/{emailId}
+
+1. View All Customers : Method "GET"
+2. URL: http://localhost:9092/api-v1/customers
+
+------------------------------------UPDATE----------------------------------------------
+
+1. Update Customer : Method "PUT"
+2. URL: http://localhost:9092/api-v1/customers/{customerId}
+3. INPUT: 
+   Body -> Raw -> JSON
+   {
+     "customerId":Respected customerID,
+     "customerName" : "suresh",
+    "emailId" : "suresh@gmail.com",
+    "mobileNumber" : "9087901234",
+    "password" : "suresh",
+    "address":"jagtial"
+	}
+	
+	
+	* This is the second update method which is used to update only required customer variables
+	    in the frontend customer dashboard profile
+	    
+1. Update CustomerbyEmail : Method "PUT"
+2. URL: http://localhost:9092/api-v1/updateEmail/{id}
+	
+	
+------------------------------------DELETE----------------------------------------------
+1. Delete Customer : Method "DELETE"
+2.  URL: http://localhost:9092/api-v1/customers/{customerId}
+
+
+------------------------------------LOGIN----------------------------------------------
+1. login Customer : Method "POST"
+2. URL: http://localhost:9092/api-v1/login
+3. INPUT: 
+   Body -> Raw -> JSON
+   {
+    "field" : "ramesh@gmail.com" or mobileNumber
+    "password" : "ramesh"
+	}
+4. If the email and password is correct we will get "true" message
+5.If the email and password is incorrect we will get "false" message
+6.If the email is incorrect,we will get "email not exist" message
+7.If the password is incorrect , we will get "password Not Match" message
+
+------------------------------------RESET PASSWORD----------------------------------------------
+1. resetPassword : Method "PUT"
+2. URL: http://localhost:9092/api-v1/reset
+3. INPUT: 
+   Body -> Raw -> JSON
+   {
+    "emailId" : "ramesh@gmail.com",
+	}
+4. If the email is correct then u will get a otp to that mail.
+5.If the email is incorrect we will get "mail not exists" message.
+
+------------------------------------PASSWORD----------------------------------------------
+1.newPassword : Method "PUT" 
+2.URL: http://localhost:9092/api-v1/password
+3. INPUT: 
+   Body -> Raw -> JSON
+   {
+    "otp" : enter otp which u got in a mail
+    "password":enter your new password
+	}
+4.If you enter invalid otp number , u will get invalid otp as a error message
+5.By giving valid otp and giving new password , after submit u will get password reset successfully message
+6.Then u will get Your new password to your mail
